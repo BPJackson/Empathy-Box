@@ -6,11 +6,29 @@
     <title>Empathy Box</title>
   </head>
   <body>
-    <input id="user_file" type="file">
-    <button id="submit" type="submit">VRify!</button>
-    <!-- <iframe id="output" src=""></iframe> -->
+    <input class ="input1" type="url" placeholder="Left Eye URL">
+    <input class ="input2" type="url" placeholder="Right Eye URL">
+    <button class="preview" type="submit">Preview!</button>
+      <div id="emptyInput" hidden="hidden">Please enter two valid URLs</div>
+
+    <div class="twoImages">
+      <div class="output"></div>
+      <!-- Is basically  -->
+      <!-- <div id="imgLeft"><img src="blah.jpg"></div>
+      <div id="imgRight"><img src="blah.jpg"></div> -->
+      
+    </div>
+
+    <button class ="stereoscopify" type="submit">Stereoscopify!</button>
   </body>
-  <script type="text/javascript" src="/Users/mikelhowarth/workspace/html/html-forms/bower_components/jquery/dist/jquery.min.js">
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />  </script>
   <script type="text/javascript" src="app.js"></script>
-  </script>
+
+
+  http://gallery.photo.net/photo/7884233-md.jpg
+
+
+
 </html>
