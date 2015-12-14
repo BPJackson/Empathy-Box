@@ -1,0 +1,56 @@
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: red;
+  height: 7vh;
+}
+.mainName {
+  margin-left: 2vw;
+}
+.circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 65vh;
+}
+.circleLeft {
+  background-color: blue;
+  width: 25vw;
+  height: 25vw;
+  border-radius: 50%;
+}
+.circleRight {
+  background-color: green;
+  width: 25vw;
+  height: 25vw;
+  border-radius: 50%;
+}
+.mainPage {
+  background-color: yellow;
+  width: 100vw;
+  height: 100vh;
+}
+.mainButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#tagline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+}
+#tagline p {
+  align-self: flex-start;
+  margin-top: 2vh;
+}
+.letsGo {
+  border-radius: 1000px;
+  width: 10em;
+  height: 3em;
+  border: 2px solid black;
+  background-blend-mode: luminosity;
+}
