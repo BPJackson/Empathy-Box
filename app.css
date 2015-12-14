@@ -1,21 +1,34 @@
 /** {
   background-color: black;
 }*/
-.imageLeft {
+/*#imageLeft {
   width: 90%;
   height: 90%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-.imageRight {
+#imageRight {
   width: 90%;
   height: 90%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-}
+}*/
 .twoImages {
   display: flex;
   align-items: center;
 }
+
+
+
+
+
+
+
+/*<style>#imgLeft{
+  width: 90%; height: 90%; background-image: url(+'userImg1'+); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%;}</style>
+<div id="imgLeft"></div>
+<style>#imgRight{
+  width: 90%; height: 90%; background-image: url(+'userImg2'+); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%;}</style>
+<div id="imgRight"></div>*/

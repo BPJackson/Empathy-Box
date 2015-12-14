@@ -1,10 +1,24 @@
 * {
-  background-color: black;
+  background-color: grey;
+}
+.userInputs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.previewSubmitButtons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.viewPortAndImages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .image1 {
   width: 90%;
   height: 90%;
-  background-image: url("http://gallery.photo.net/photo/7884233-md.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -12,14 +26,11 @@
 .image2 {
   width: 90%;
   height: 90%;
-  background-image: url("http://gallery.photo.net/photo/3067758-md.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-#viewPort {
+.viewPort {
   display: flex;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
 }

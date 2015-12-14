@@ -6,29 +6,19 @@ $(".preview").click(function(){
       autoOpen: false
     })
   });
+      var userImg1 = $(".input1").val();
+      var userImg2 = $(".input2").val();
       //If the input is good then output the images
-      if ($(".input1").val() && $(".input2").val() !== ""){
-        $(".output").replaceWith('<div id="imgLeft"><img src="' + $(".input1").val() + '"></div>' + '<div id="imgRight"><img src="' + $(".input2").val() + '"></div>')
+      if (userImg1 && userImg2 !== ""){
+        $(".output").replaceWith('<style>#imgLeft{ width: 90%; height: 90%; background-image: url(+'userImg1'+); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%;}</style>'+
+              '<div id="imgLeft"></div>'+
+              '<style>#imgRight{ width: 90%; height: 90%; background-image: url(+'userImg2'+); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%;}</style>'+
+              '<div id="imgRight"></div>')
           //This keeps broken image icons from popping up
           $("img").error(function(){
             $(this).hide();
             $("#emptyInput").dialog('open')
           });
-          //Janky attempt at styling this fucking dynamic shit
-          // $("#imgLeft").css({
-          //   'width': '90%';
-          //   'height': '90%';
-          //   'background-size': 'cover';
-          //   'background-repeat': 'no-repeat';
-          //   'background-position': '50%' '50%';
-          // })
-          // $("#imgRight").css({
-          //   'width': '90%';
-          //   'height': '90%';
-          //   'background-size': 'cover';
-          //   'background-repeat': 'no-repeat';
-          //   'background-position': '50%' '50%';
-          // })
       }
       //If the input is shit, tell them to put a real URL in
       else {
