@@ -32,11 +32,11 @@
       <button class="stereoscopicButton" type="submit">Stereoscopify!</button>
       </div>
   <!-- This is our left eye upload -->
-  <input class="leftUpload" type="file" onchange="previewLeftFile()">
+  <input class="leftUpload" type="file">
   <!-- This is where we see our left eye preview-->
   <img class="previewLeft" src="" height="200">
   <!-- This is our right eye upload -->
-  <input class="rightUpload" type="file" onchange="previewRightFile()">
+  <input class="rightUpload" type="file">
   <!-- This is where we see our right eye preview-->
   <img class="previewRight" src="" height="200">
   <!-- Upload preview button -->
@@ -46,5 +46,6 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="app.js"></script>
   <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="exif.js"></script>
   </body>
 </html>
