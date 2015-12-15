@@ -1,6 +1,13 @@
 * {
   background-color: grey;
 }
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #3b3b3b;
+  height: 7vh;
+}
 .userInputs {
   display: flex;
   justify-content: center;
@@ -33,4 +40,8 @@
 .viewPort {
   display: flex;
   align-items: center;
+}
+.leftUpload {
+}
+.rightUpload {
 }

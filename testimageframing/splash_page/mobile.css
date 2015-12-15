@@ -1,0 +1,21 @@
+#tagline {
+  margin-top: 0 auto;
+  height: 5vh;
+}
+#tagline p {
+  font-size: 4vw;
+  margin-top: 0px;
+}
+.circles {
+  height: 50vh;
+}
+.mainButton {
+  height: 40vh;
+}
+.letsGo {
+  width: 40vw;
+  height: 7vh;
+}
+.mainName {
+  font-size: 1.7vh;
+}

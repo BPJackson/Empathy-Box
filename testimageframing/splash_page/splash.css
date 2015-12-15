@@ -7,6 +7,7 @@ header {
 }
 .mainName {
   margin-left: 2vw;
+  font-size: 1em;
 }
 .circles {
   display: flex;
@@ -44,10 +45,12 @@ header {
   height: 15vh;
 }
 #tagline p {
-  align-self: flex-start;
+  flex-wrap: nowrap;
   margin-top: 2vh;
+  font-size: 3vw;
 }
 .letsGo {
+  font-size: 1.5em;
   border-radius: 1000px;
   width: 10em;
   height: 3em;

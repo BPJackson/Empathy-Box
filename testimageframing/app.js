@@ -27,7 +27,6 @@ $("img").error(function(){
     //This is our stereoscopify button
     $(".stereoscopicButton").on("click", function(){
       if($(".leftEye").val() && $(".rightEye").val() !== ""){
-        
         $(".viewPort").animate({ height: '100vh', width: '100vw' }, 1000 )
       }
       else {
@@ -35,3 +34,28 @@ $("img").error(function(){
       }
   })
 })
+
+//(These functions had to be declared OUTSIDE of the document.ready jQuery func)
+//This shows us the left eye image when the user uploads it
+function previewLeftFile() {
+  var previewLeft = document.querySelector('.previewLeft');
+  var file    = document.querySelector('input[type=file]').files[0];
+  var reader  = new FileReader();
+  reader.onloadend = function () {
+    previewLeft.src = reader.result;
+  }
+  if (file) {
+    reader.readAsDataURL(file);
+  }
+}
+function previewRightFile() {
+  var previewRight = document.querySelector('.previewRight');
+  var file    = document.querySelector('input[type=file]').files[0];
+  var reader  = new FileReader();
+  reader.onloadend = function () {
+    previewRight.src = reader.result;
+  }
+  if (file) {
+    reader.readAsDataURL(file);
+  }
+}

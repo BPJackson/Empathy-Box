@@ -4,10 +4,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" charset="utf-8">
     <link rel="stylesheet" href="app.css" charset="utf-8">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" media="screen and (max-device-width: 450px)" href="mobile2.css" />
     <meta charset="utf-8">
     <title>Empathy Box</title>
   </head>
   <body>
+    <header>
+      <div class="mainName">empathy box</div>
+    </header>
     <!-- This is the hidden modal popup -->
     <div id="emptyInputAlert" hidden="hidden">Please enter two valid URLs</div>
       <!-- User inputs for both eyes -->
@@ -27,6 +31,14 @@
       <button class="previewButton" type="preview">Preview!</button>
       <button class="stereoscopicButton" type="submit">Stereoscopify!</button>
       </div>
+  <!-- This is our left eye upload -->
+  <input class="leftUpload" type="file" onchange="previewLeftFile()">
+  <!-- This is where we see our left eye preview-->
+  <img class="previewLeft" src="" height="200">
+  <!-- This is our right eye upload -->
+  <input class="rightUpload" type="file" onchange="previewRightFile()">
+  <!-- This is where we see our right eye preview-->
+  <img class="previewRight" src="" height="200">
   <!-- scripts -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="app.js"></script>
