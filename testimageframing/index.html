@@ -9,43 +9,69 @@
     <title>Empathy Box</title>
   </head>
   <body>
-    <header>
-      <div class="mainName">empathy box</div>
-    </header>
-    <!-- This is the hidden modal popup -->
-    <div id="emptyInputAlert" hidden="hidden">Please enter two valid URLs</div>
-      <!-- User inputs for both eyes -->
-      <div class="userInputs">
-      <input class="leftEye" type="url" placeholder="Left Eye URL">
-      <input class="rightEye" type="url" placeholder="Right Eye URL">
-      </div>
-      <!-- Div containing both images and viewPort div-->
-      <div class="viewPortAndImages">
-        <div class="viewPort">
-          <div class="image1"></div>
-          <div class="image2"></div>
+    <div id="mainContainer">
+        <header>
+          <div class="mainName">empathy box</div>
+        </header>
+      <div class="containerNoHeader">
+        <!-- This is the hidden modal popup -->
+        <div id="emptyInputAlert" hidden="hidden">Please enter two valid URLs</div>
+
+
+
+
+      <div class="leftPage">
+        <div class="leftBox">
+          <!-- User inputs for both eyes -->
+          <input class="leftEye" type="url" placeholder="Left Eye URL">
+          <input class="rightEye" type="url" placeholder="Right Eye URL">
+          <!-- This is our left eye upload -->
+          <input class="leftUpload" type="file" onchange="previewLeftFile()">
+          <!-- This is our right eye upload -->
+          <input class="rightUpload" type="file" onchange="previewRightFile()">
         </div>
       </div>
-      <!-- Buttons for preview and full view -->
-      <div class="previewSubmitButtons">
-      <button class="previewButton" type="preview">Preview!</button>
-      <button class="stereoscopicButton" type="submit">Stereoscopify!</button>
-      </div>
-  <!-- This is our left eye upload -->
-  <input class="leftUpload" type="file">
-  <!-- This is where we see our left eye preview-->
-  <img class="previewLeft" src="" height="200">
-  <!-- This is our right eye upload -->
-  <input class="rightUpload" type="file">
-  <!-- This is where we see our right eye preview-->
-  <img class="previewRight" src="" height="200">
-  <!-- Upload preview button -->
-  <button class="uploadPreview" type="submit">upload preview!</button>
-  <button class="uploadStereoscopifyButton" type="submit">Stereoscopify!</button>
+
+
+
+
+
+          <!-- Div containing both images and viewPort div-->
+          <div class="viewPortAndImages">
+            <div class="viewPort">
+              <div class="image1"></div>
+              <div class="image2"></div>
+            </div>
+
+
+          </div>
+
+
+
+
+        <div class="rightPage">
+          <div class="rightBox">
+            <button class="uploadPreview" type="submit">Upload Preview</button>
+            <button class="uploadStereoscopifyButton" type="submit">Upload Stereoscopic </button>
+            <!-- Buttons for preview and full view -->
+            <div class="previewSubmitButtons">
+              <button class="previewButton" type="preview">Input URL Preview</button>
+              <button class="stereoscopicButton" type="submit">Input URL Stereoscopic</button>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+    </div>
+  </div>
   <!-- scripts -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="app.js"></script>
   <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
   <script type="text/javascript" src="exif.js"></script>
+  <script src="js/load-image.all.min.js"></script>
   </body>
 </html>

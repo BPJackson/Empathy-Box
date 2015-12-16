@@ -1,27 +1,38 @@
-* {
-  background-color: grey;
+  #mainContainer {
+  background-image:
+    linear-gradient(
+      #19666b, #c77243
+  );
+  background-attachment:fixed;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.containerNoHeader {
+  display: flex;
+  align-items: ;
+  justify-content: center;
 }
 header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: #3b3b3b;
+  background-color: #505050;
   height: 7vh;
+  opacity: .7;
 }
 .userInputs {
-  display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
 }
 .previewSubmitButtons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
 }
 .viewPortAndImages {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .image1 {
   width: 90%;
@@ -42,6 +53,50 @@ header {
   align-items: center;
 }
 .leftUpload {
+  color: transparent;
+  display: flex;
+}
+.leftEye {
+  height: 5%;
+  width: 10vw;
+}
+.rightEye {
+  height: 5%;
+  width: 10vw;
 }
 .rightUpload {
+  color: transparent;
+  display: flex;
+}
+.leftBox {
+  display: flex;
+  width: 30vw;
+  height: 30vw;
+  margin: auto;
+  margin-right: 5vw;
+  border: 2px dashed black;
+  border-radius: 5%;
+  flex-direction: column;
+}
+.rightBox {
+  display: flex;
+  width: 30vw;
+  height: 30vw;
+  margin: auto;
+  margin-left: 5vw;
+  border: 2px dashed black;
+  border-radius: 5%;
+}
+.previewLeft, .previewRight{
+  margin: auto;
+}
+.leftPage {
+  display: flex;
+  width: 50vw;
+  height: 100vh;
+}
+.rightPage {
+  display: flex;
+  width: 50vw;
+  height: 100vh;
 }
