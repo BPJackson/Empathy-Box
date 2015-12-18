@@ -1,15 +1,42 @@
 $(document).ready(function(){
+
+  $(window).resize(function(){
+	if ($(window).width() <= 736){
+    $(".words").hide();
+	}
+})
+
+  $(".containerNoHeader").animate({"opacity": 1.0}, 800)
   //This is our modal instead of alert
   $(function() {
     $("#emptyInputAlert").dialog({
       autoOpen: false
     })
   });
+
   //This keeps broken image icons from popping up
 $("img").error(function(){
     $(this).hide();
     $("#emptyInput").dialog('open')
   });
+  //Hide on load
+  $(".leftBox").hide();
+  $(".rightBox").hide();
+
+  $(".URL").click(function(){
+    $(".leftBox").show();
+    $(".onloadBox").hide();
+    $(".rightPage").hide();
+  })
+
+  $(".upload").click(function(){
+    $(".rightBox").show();
+    $(".onloadBox").hide();
+    $(".leftPage").hide();
+  })
+
+
+
   //===================================
   //This is our preview button
   $(".previewButton").click(function(){
@@ -17,7 +44,7 @@ $("img").error(function(){
       //When the user clicks 'preview', they see their images
       $(".viewPort").append('<style>.image1{background-image: url("'+$(".leftEye").val()+'");}</style>'+'<style>.image2{background-image: url("'+$(".rightEye").val()+'");}</style>')
       //This animates our images to small preview mode
-      $(".viewPort").animate({ height: '10vh', width: '10vw' }, 1000 )
+      $(".viewPort").animate({ height: '30vh', width: '30vw' }, 700 )
     }
     //If there is a bad URL or no input, we show our modal
     else {
@@ -27,7 +54,7 @@ $("img").error(function(){
     //This is our stereoscopify button
     $(".stereoscopicButton").on("click", function(){
       if($(".leftEye").val() && $(".rightEye").val() !== ""){
-        $(".viewPort").animate({ height: '100vh', width: '100vw' }, 1000 )
+        $(".viewPort").animate({ height: '100vh', width: '100vw' }, 700 )
       }
       else {
         $("#emptyInputAlert").dialog('open');
@@ -69,7 +96,7 @@ $(".uploadPreview").click(function(){
   reader.onload = function(e) {
     $(".viewPort").append('<style>.image1{background-image: url("'+e.target.result+'");}</style>')
     //This animates our images to small preview mode
-    $(".viewPort").animate({ height: '10vh', width: '10vw' }, 1000 )
+    $(".viewPort").animate({ height: '20vh', width: '20vw' }, 400 )
   }
   if (file) {
     reader.readAsDataURL(file);
@@ -82,7 +109,7 @@ $(".uploadPreview").click(function(){
   reader2.onload = function(e) {
     $(".viewPort").append('<style>.image2{background-image: url("'+e.target.result+'");}</style>')
     //This animates our images to small preview mode
-    $(".viewPort").animate({ height: '10vh', width: '10vw' }, 1000 )
+    // $(".viewPort").animate({ height: '10vh', width: '10vw' }, 400 )
   }
   if (file) {
     reader2.readAsDataURL(file);
@@ -90,8 +117,81 @@ $(".uploadPreview").click(function(){
 })
 //Heres the upload stereoscopify button
 $(".uploadStereoscopifyButton").click(function(){
-  $(".viewPort").animate({ height: '100vh', width: '100vw' }, 1000 )
+  // $(".uploadPreview").click(function(){
+    $(".viewPort").animate({ height: '100vh', width: '100vw' }, 400 )
+    // $(".rightBox").fadeOut("fast");
+    // $(".leftBox").fadeOut("fast");
+    // $("header").fadeOut("fast");
+    // })
 })
+
+$('.viewPort').click(function(){
+  $(".viewPort").animate({ height: '', width: '' }, 300 )
+  $(".rightBox").fadeIn("fast");
+  $(".leftBox").fadeIn("fast");
+  $("header").fadeIn("fast");
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// TESTING SHIT===============================================
+
+// $(".leftUpload").click(function(){
+//   //Here the left uploaded image will be previewed and displayed
+//   var previewLeft = document.querySelector('.previewLeft');
+//   var file    = document.querySelector('input[class="leftUpload"]').files[0];
+//   var reader  = new FileReader();
+//   //This is where the magic happens with the uploaded images
+//   reader.onload = function(e) {
+//     $(".uploadButtons").append('<style>.leftUpload{background-image: url("'+e.target.result+'");}</style>')
+//     //This animates our images to small preview mode
+//     $(".uploadButtons").animate({ height: '10vh', width: '10vw' }, 1000 )
+//   }
+//   if (file) {
+//     reader.readAsDataURL(file);
+//   }
+//   //Here the right uploaded image will be previewed and displayed
+//   var previewRight = document.querySelector('.previewRight');
+//   var file    = document.querySelector('input[class="rightUpload"]').files[0];
+//   var reader2  = new FileReader();
+//   //This is where the magic happens with the uploaded images
+//   reader2.onload = function(e) {
+//     $(".viewPort").append('<style>.image2{background-image: url("'+e.target.result+'");}</style>')
+//     //This animates our images to small preview mode
+//     $(".viewPort").animate({ height: '10vh', width: '10vw' }, 1000 )
+//   }
+//   if (file) {
+//     reader2.readAsDataURL(file);
+//   }
+// })
+
+
+
+
+
+
+
+
+
 
 
 

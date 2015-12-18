@@ -1,42 +1,131 @@
+input:focus, textarea:focus, button:focus {
+  outline: none;
+}
+* {
+  font-family: 'Muli', sans-serif;
+}
+.mainTitle, .mainName, .catchPhrase {
+  font-family: quicksand;
+  color: rgb(48, 35, 21)
+}
+.mainTitle {
+  position: relative;
+  z-index: 3
+}
 header {
+  z-index: 3;
+  position: fixed;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: red;
+  background-color: rgba(85, 75, 60, .3);
   height: 7vh;
+  width: 100vw;
+  transition-duration: .4s;
+}
+header:hover {
+  background-color: rgba(85, 75, 60, .7);
+  transition-duration: .4s;
+}
+#phrase {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vw;
+  height: auto;
+}
+.catchPhrase {
+  margin-top: 0vh;
+  height: 3vh;
+}
+.logo {
+  margin-left: 1vw;
+  width: 2em;
+  height: auto;
 }
 .mainName {
   margin-left: 2vw;
-  font-size: 1em;
+  font-size: 1.5em;
 }
 .circles {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 65vh;
+  height: 70vh;
 }
 .circleLeft {
-  background-color: blue;
+  z-index: 1;
+  position: relative;
   width: 25vw;
   height: 25vw;
   border-radius: 50%;
+  background-image: url("../main_icon.png");
+  background-size: cover;
+}
+#leftCircle {
+  cursor: none;
+}
+#rightCircle {
+  cursor: none;
 }
 .circleRight {
-  background-color: green;
+  z-index: 0;
+  position: relative;
   width: 25vw;
   height: 25vw;
   border-radius: 50%;
+  background-image: url("../main_icon.png");
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  background-size: cover;
 }
 .mainPage {
-  background-color: yellow;
+  background-image:
+    linear-gradient(
+      #19666b, #c77243
+  );
   width: 100vw;
-  height: 100vh;
+  height: 100%;
+}
+.words {
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  line-height: 10vh;
+}
+span {
+  margin: auto;
+  font-size: 4vh;
+  font-weight: lighter;
+  color: rgb(48, 35, 21);
+  margin-top: 10vh;
+}
+.words {
+  margin-top: 20vh;
+}
+.downContainer {
+  display: flex;
+  height: 4vh;
+  margin-bottom: 15vh;
+}
+.downArrow {
+  width: 4vw;
+  margin: auto;
+  opacity: .5;
 }
 .mainButton {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-content: flex-end;
   align-items: center;
+  margin-bottom: 10vh;
+  margin-top: 10vh;
 }
 #tagline {
   display: flex;
@@ -46,14 +135,25 @@ header {
 }
 #tagline p {
   flex-wrap: nowrap;
-  margin-top: 2vh;
-  font-size: 3vw;
+  margin-top: 25vh;
+  font-size: 5vw;
 }
 .letsGo {
-  font-size: 1.5em;
+  letter-spacing: 2px;
+  font-size: 1.4vw;
   border-radius: 1000px;
-  width: 10em;
-  height: 3em;
-  border: 2px solid black;
-  background-blend-mode: luminosity;
+  width: 15vw;
+  height: 5vw;
+  border: 1.5px solid black;
+  background-color: rgba(0, 0, 0, 0.10);
+  color: rgb(48, 35, 21);
+}
+.letsGo:hover {
+  background-color: rgba(0, 0, 0, 0.20);
+}
+.letsGo:active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+body{
+  background-color: black;
 }

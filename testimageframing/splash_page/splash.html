@@ -1,29 +1,53 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
     <link rel="stylesheet" href="splash.css" charset="utf-8">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
-    <link rel="stylesheet" media="screen and (max-device-width: 450px)" href="mobile.css" />
+    <link rel="stylesheet" media="screen and (max-device-width: 736px)" href="../mobile2.css" />
     <meta charset="utf-8">
     <title>Empathy Box</title>
   </head>
   <body>
+    <article class="mainPage">
     <header>
-      <div class="mainName">empathy box</div>
+      <div class="mainName">EMPATHY BOX</div><img class="logo" src="../empathy_logo.png">
     </header>
-  <article class="mainPage">
+    <div id="tagline">
+      <p class="mainTitle">WELCOME TO EMPATHY BOX</p>
+    </div>
         <div class="circles">
-          <div class="circleLeft"></div>
-          <div class="circleRight"></div>
+            <div id="leftCircle" class="circleLeft"></div>
+            <div id="rightCircle" class="circleRight"></div>
         </div>
-        <div id="tagline">
-          <p>turn your photos into stereoscopic experiences</p>
+        <div class="mobileLogoHolder">
+          <a href="../index.html"><div id="mobileLogo">
+          </div></a>
         </div>
+    <div id="phrase">
+      <p class="catchPhrase">CREATE EXPERIENCES FROM YOUR PHOTOS</p>
+    </div>
+    <div class="downContainer">
+      <img class="downArrow" src="../downArrow.png" alt="">
+    </div>
+    <section class="words">
+      <span class="explanation">Empathy box is a tool that allows you to capture life in a stereoscopic way.</span>
+      <span>------------------------------------------------</span>
+      <span class="angleExplanation">Stereoscopic you say? It's the way our eyes see depth in the world, and can be recreated with two photos taken from slightly different angles.</span>
+      <span>------------------------------------------------</span>
+      <span class="youComeIn">That's where you come in. Using your smartphone, you can create a stereoscopic experience from your own photos!</span>
+      <span>------------------------------------------------</span>
+      <span class="makeSure">Make sure to photograph a subject between 3 and 20 feet away.</span>
+      <span>------------------------------------------------</span>
+      <span class="results">For the best results, make sure your phone is in landscape mode, and take your photos ahead of time.</span>
+    </section>
         <div class="mainButton">
           <button class="letsGo" type="submit" name="button">let's go</button>
         </div>
   </article>
+    <script type="text/javascript" src="/Users/mikelhowarth/workspace/offline/jquery.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="splash.js"></script>

@@ -1,72 +1,106 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" charset="utf-8">
     <link rel="stylesheet" href="app.css" charset="utf-8">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
-    <link rel="stylesheet" media="screen and (max-device-width: 450px)" href="mobile2.css" />
+    <!-- <link rel="stylesheet" media="screen and (max-device-width: 450px)" href="mobile2.css" /> -->
     <meta charset="utf-8">
     <title>Empathy Box</title>
   </head>
   <body>
-    <div id="mainContainer">
-        <header>
-          <div class="mainName">empathy box</div>
-        </header>
-      <div class="containerNoHeader">
-        <!-- This is the hidden modal popup -->
-        <div id="emptyInputAlert" hidden="hidden">Please enter two valid URLs</div>
+      <div id="mainContainer">
+          <header>
+            <a id="titleBack" href="splash_page/splash.html"><div href="splash_page/splash.html" class="mainName">EMPATHY BOX</div></a><img class="logo" src="empathy_logo.png"/>
+          </header>
+        <div class="containerNoHeader">
+          <!-- This is the hidden modal popup -->
+          <div id="emptyInputAlert" hidden="hidden">Please enter two valid URLs</div>
 
 
 
 
-      <div class="leftPage">
-        <div class="leftBox">
-          <!-- User inputs for both eyes -->
-          <input class="leftEye" type="url" placeholder="Left Eye URL">
-          <input class="rightEye" type="url" placeholder="Right Eye URL">
-          <!-- This is our left eye upload -->
-          <input class="leftUpload" type="file" onchange="previewLeftFile()">
-          <!-- This is our right eye upload -->
-          <input class="rightUpload" type="file" onchange="previewRightFile()">
+        <div class="leftPage">
+          <div class="leftBox">
+            <a href="index.html"><p class="backToInput"><</p></a>
+            <div class="inputFields">
+            <!-- User inputs for both eyes -->
+            <input class="leftEye" type="url" placeholder="Left Eye URL">
+            <input class="rightEye" type="url" placeholder="Right Eye URL">
+            </div>
+            <div class="viewPortAndImages">
+              <div class="viewPort">
+                <div class="image1"></div>
+                <div class="image2"></div>
+              </div>
+            </div>
+            <div class="previewButtonContainer">
+              <button class="previewButton" type="preview">Preview!</button>
+            </div>
+          </div>
         </div>
+
+
+
+        <div class="onloadBox">
+          <div class="firstBox">
+            <p class="choose">Where are your images coming from?</p>
+            <button class="URL" type="submit">URL</button>
+            <button class="upload" type="submit">upload</button>
+          </div>
+        </div>
+
+
+            <!-- Div containing both images and viewPort div-->
+            <!-- <div class="viewPortAndImages">
+              <div class="viewPort">
+                <div class="image1"></div>
+                <div class="image2"></div>
+              </div>
+            </div> -->
+
+
+
+
+          <div class="rightPage">
+            <div class="rightBox">
+              <a href="index.html"><p class="backToInput"><</p></a>
+              <!-- <button class="uploadStereoscopifyButton" type="submit">Upload Stereoscopic </button> -->
+              <!-- Buttons for preview and full view -->
+                <!-- <button class="stereoscopicButton" type="submit">Input URL Stereoscopic</button> -->
+                <div class="uploadButtons">
+                <!-- This is our left eye upload -->
+                <input class="leftUpload" style="" type="file" onchange="previewLeftFile()">
+                <!-- <img class="previewLeft"  src="" height="200"> -->
+                <!-- This is our right eye upload -->
+                <input class="rightUpload" style="" type="file" onchange="previewRightFile()">
+
+                <!-- <img class="previewRight" src="" height="200"> -->
+                </div>
+                <div class="eyes">
+                  <p>left eye</p><p>right eye</p>
+                </div>
+                <div class="viewPortAndImages">
+                  <div class="viewPort">
+                    <div class="image1"></div>
+                    <div class="image2"></div>
+                  </div>
+                </div>
+                <div class="uploadContainer">
+                  <button class="uploadPreview" type="submit">Preview!</button>
+                </div>
+                <button class="uploadStereoscopifyButton" type="submit">Stereoscopify!</button>
+            </div>
+          </div>
+
+
+
+
+
       </div>
-
-
-
-
-
-          <!-- Div containing both images and viewPort div-->
-          <div class="viewPortAndImages">
-            <div class="viewPort">
-              <div class="image1"></div>
-              <div class="image2"></div>
-            </div>
-
-
-          </div>
-
-
-
-
-        <div class="rightPage">
-          <div class="rightBox">
-            <button class="uploadPreview" type="submit">Upload Preview</button>
-            <button class="uploadStereoscopifyButton" type="submit">Upload Stereoscopic </button>
-            <!-- Buttons for preview and full view -->
-            <div class="previewSubmitButtons">
-              <button class="previewButton" type="preview">Input URL Preview</button>
-              <button class="stereoscopicButton" type="submit">Input URL Stereoscopic</button>
-            </div>
-          </div>
-        </div>
-
-
-
-
-
     </div>
-  </div>
   <!-- scripts -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="app.js"></script>

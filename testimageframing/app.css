@@ -1,4 +1,16 @@
+  input:focus, textarea:focus, button:focus {
+    outline: 0;
+  }
+  input {
+      background-color:transparent;
+      border: 1px dashed;
+      border-radius: 500px;
+  }
+  p {
+    margin-top: 0px;
+  }
   #mainContainer {
+  font-family: quicksand;
   background-image:
     linear-gradient(
       #19666b, #c77243
@@ -7,24 +19,53 @@
   min-height: 100%;
   width: 100%;
   height: auto;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
+}
+.backToInput {
+  width: 2vw;
+  height: 2vw;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.08);
+  margin-top: 0;
+  text-align: center;
+}
+.backToInput:hover {
+  opacity: .3;
 }
 .containerNoHeader {
   display: flex;
   align-items: ;
   justify-content: center;
+  opacity: 0;
+}
+.mainName {
+  margin-left: 2vw;
+  font-size: 1.5em;
+}
+.logo {
+  margin-left: 1vw;
+  width: 3vw;
+  height: auto;
+}
+body {
+  background-color: black;
 }
 header {
+  position: fixed;
+  z-index: 5;
+  width: 100vw;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: #505050;
+  background-color: rgba(85, 75, 60, .3);
   height: 7vh;
-  opacity: .7;
+  transition-duration: .4s;
 }
-.userInputs {
+header:hover {
+  background-color: rgba(85, 75, 60, .7);
+  transition-duration: .4s;
 }
 .previewSubmitButtons {
 }
@@ -34,12 +75,19 @@ header {
   align-items: center;
   flex-direction: column;
 }
+.viewPort {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
 .image1 {
+  position: relative;
   width: 90%;
   height: 90%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  z-index: 0
 }
 .image2 {
   width: 90%;
@@ -48,55 +96,228 @@ header {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-.viewPort {
-  display: flex;
-  align-items: center;
-}
 .leftUpload {
   color: transparent;
   display: flex;
 }
 .leftEye {
-  height: 5%;
+  font-size: 1.4vw;
+  background-color: rgba(0, 0, 0, 0);
+  margin: auto;
+  height: 10%;
   width: 10vw;
 }
 .rightEye {
-  height: 5%;
+  font-size: 1.4vw;
+  background-color: rgba(0, 0, 0, 0);
+  margin: auto;
+  height: 10%;
   width: 10vw;
 }
-.rightUpload {
-  color: transparent;
+.onloadBox {
   display: flex;
+  position: relative;
+  z-index: 0;
+  width: 50vw;
+  height: 100vh;
 }
-.leftBox {
+.choose {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 2vh;
+}
+.firstBox {
+  position: relative;
+  z-index: 0;
   display: flex;
   width: 30vw;
   height: 30vw;
   margin: auto;
-  margin-right: 5vw;
-  border: 2px dashed black;
   border-radius: 5%;
   flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.08);
 }
-.rightBox {
+.leftBox {
+  position: relative;
   display: flex;
   width: 30vw;
   height: 30vw;
   margin: auto;
-  margin-left: 5vw;
-  border: 2px dashed black;
   border-radius: 5%;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.08)
+}
+.rightBox {
+  position: relative;
+  display: flex;
+  width: 30vw;
+  height: 30vw;
+  margin: auto;
+  border-radius: 5%;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.08)
 }
 .previewLeft, .previewRight{
   margin: auto;
 }
+.eyes {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  color: rgb(162, 162, 162)
+}
 .leftPage {
   display: flex;
-  width: 50vw;
+  position: relative;
+  z-index: 0;
+  width: 100vw;
   height: 100vh;
+  align-content: center;
+  justify-content: center;
 }
 .rightPage {
   display: flex;
-  width: 50vw;
+  position: relative;
+  z-index: 1;
+  width: 100vw;
   height: 100vh;
+}
+.URL {
+  margin: auto;
+  font-size: 1.4vw;
+  border-radius: 1000px;
+  width: 60%;
+  height: 20%;
+  border: 1.5px solid black;
+  background-color: rgba(0, 0, 0, 0.10);
+}
+.URL:hover {
+  background-color: rgba(0, 0, 0, 0.20);
+}
+.upload {
+  margin: auto;
+  font-size: 1.4vw;
+  border-radius: 1000px;
+  width: 60%;
+  height: 20%;
+  border: 1.5px solid black;
+  background-color: rgba(0, 0, 0, 0.10);
+}
+.upload:hover {
+  background-color: rgba(0, 0, 0, 0.20);
+}
+.uploadStereoscopifyButton {
+  margin: auto;
+  font-size: 1.4vw;
+  border-radius: 1000px;
+  width: 60%;
+  height: 20%;
+  border: 1.5px solid black;
+  background-color: rgba(0, 0, 0, 0.10);
+}
+.uploadStereoscopifyButton:hover {
+  background-color: rgba(0, 0, 0, 0.20);
+}
+.uploadPreview {
+  margin: auto;
+  font-size: 1.4vw;
+  border-radius: 1000px;
+  width: 60%;
+  height: 40%;
+  border: 1.5px solid black;
+  background-color: rgba(0, 0, 0, 0.10);
+}
+.uploadPreview:hover {
+  background-color: rgba(0, 0, 0, 0.20);
+}
+.previewButtonContainer {
+  display: flex;
+  align-content: center;
+  height: 50%;
+  width: auto;
+}
+.previewButton {
+  margin: auto;
+  font-size: 1.4vw;
+  border-radius: 1000px;
+  width: 60%;
+  height: 40%;
+  border: 1.5px solid black;
+  background-color: rgba(0, 0, 0, 0.10);
+}
+.previewButton:hover {
+  background-color: rgba(0, 0, 0, 0.20);
+}
+.stereoscopicButton {
+  margin: auto;
+  font-size: 1.4vw;
+  border-radius: 1000px;
+  width: 60%;
+  height: 20%;
+  border: 1.5px solid black;
+  background-color: rgba(0, 0, 0, 0.10);
+}
+.stereoscopicButton:hover {
+  background-color: rgba(0, 0, 0, 0.20);
+}
+.leftUpload {
+  z-index: 0;
+  position: relative;
+  margin: auto;
+  font-size: 1.5em;
+  border-radius: 1000px;
+  width: 20%;
+  height: 40%;
+  border: 1.5px dashed black;
+  padding: 12vh 0 0 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.10);
+}
+.leftUpload:hover {
+  background-color: rgba(0, 0, 0, 0.20);
+}
+.rightUpload {
+  z-index: 0;
+  position: relative;
+  margin: auto;
+  font-size: 1.5em;
+  border-radius: 1000px;
+  width: 6vw;
+  height: 6vw;
+  border: 1.5px dashed black;
+  padding: 12vh 0 0 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.10);
+}
+.rightUpload:hover {
+  background-color: rgba(0, 0, 0, 0.20);
+}
+.uploadContainer {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 50%;
+}
+.cardboard {
+  position: static;
+  display: flex;
+  z-index: 1;
+}
+.inputFields {
+  display: flex;
+  height: 50%;
+}
+.uploadButtons {
+  display: flex;
+  flex-direction: row;
+  height: 50%
+}
+a {
+  color: rgb(46, 38, 30);
+  text-decoration: none;
+}
+a:hover {
+  color: black;
 }
